@@ -32,7 +32,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "his": {
-        "id" = "his",
+        "id": "his",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Lịch sử",
         "number": 40,
@@ -40,7 +40,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "geo": {
-        "id" = "geo",
+        "id": "geo",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Địa lý",
         "number": 40,
