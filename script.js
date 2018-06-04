@@ -16,14 +16,6 @@ xmlhttp.onreadystatechange = function () {
 xmlhttp.open("GET", "data.txt", true);
 xmlhttp.send();
 
-document.getElementById("input-name").addEventListener("keyup", function(event) {
-  event.preventDefault();
-  if (event.keyCode === 13) {
-    // Trigger the button element with a click
-    document.getElementById("button").click();
-  }
-});
-
 function indexButton() {
     var name = document.getElementById("input-name").value.trim();
     Name = name;

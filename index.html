@@ -20,6 +20,15 @@
                 <div id = "label">Họ và tên:</div>
                 <input id = "input-name" type="text" name="name" placeholder="Nguyễn Văn A..."><br>
                 <button id = "button" type = "button" onclick="indexButton()">Làm ngay >></button>
+                <script>
+                document.getElementById("input-name").addEventListener("keyup", function(event) {
+                    event.preventDefault();
+                    if (event.keyCode === 13) {
+                    // Trigger the button element with a click
+                    document.getElementById("button").click();
+                    }
+                });
+                </script>
             </form>
         </div>
     </body>
