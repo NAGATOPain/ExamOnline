@@ -88,6 +88,10 @@ function scoring(){
             if (checkbox[j].checked){
                 checkone = j+1; break;
             }
+            if (j == checkbox.length - 1 && !checkbox[checkbox.length - 1].checked){
+                alert("Bạn bỏ sót đáp án. Hãy chọn cho đủ !");
+                return;
+            }
         }
         switch (checkone){
             case 1:
@@ -132,6 +136,18 @@ function switchToResultPage(score, str){
     document.getElementById("panel").innerHTML = '';
     var panel = document.getElementById("panel");
 
+    var name_lbl = document.createElement("b");
+    name_lbl.appendChild(document.createTextNode("Họ và tên: "));
+    var name_panel = document.createElement("div");
+    name_panel.appendChild(name_lbl);
+    name_panel.appendChild(document.createTextNode(Name));
+
+    var sub_lbl = document.createElement("b");
+    sub_lbl.appendChild(document.createTextNode("Môn thi: "));
+    var sub_panel = document.createElement("div");
+    sub_panel.appendChild(sub_lbl);
+    sub_panel.appendChild(document.createTextNode(Subject));
+
     var lbl_panel = document.createElement("b");
     lbl_panel.appendChild(document.createTextNode("Điểm của bạn: "));
     var score_panel = document.createElement("div");
@@ -144,9 +160,13 @@ function switchToResultPage(score, str){
     wrong_panel.appendChild(lbl_panel1);
     wrong_panel.appendChild(document.createTextNode(str));
 
+    panel.appendChild(name_panel);
+    panel.appendChild(document.createElement("br"));
+    panel.appendChild(sub_panel);
+    panel.appendChild(document.createElement("br"));
     panel.appendChild(score_panel);
+    panel.appendChild(document.createElement("br"));
     panel.appendChild(wrong_panel);
-
     panel.appendChild(document.createElement("br"));
     
     //Add button
