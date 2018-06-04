@@ -5,7 +5,7 @@ xmlhttp.onreadystatechange = function () {
         var myObj = JSON.parse(this.responseText);
         var list = [myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng];
         for (var i = 0; i < list.length; i++){
-            document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+" - "+list[i].time+" phút"+"</a>";
+            document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
         }
     }
 };
