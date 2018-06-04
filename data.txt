@@ -18,7 +18,7 @@
     "chem": {
         "id": "chem",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
-        "subject": "Hóa học",
+        "subject": "Hóa Học",
         "number": 40,
         "time": 50,
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
@@ -26,7 +26,7 @@
     "bio": {
         "id": "bio",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
-        "subject": "Sinh học",
+        "subject": "Sinh Học",
         "number": 40,
         "time": 50,
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
@@ -34,7 +34,7 @@
     "his": {
         "id": "his",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
-        "subject": "Lịch sử",
+        "subject": "Lịch Sử",
         "number": 40,
         "time": 50,
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
@@ -42,7 +42,7 @@
     "geo": {
         "id": "geo",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
-        "subject": "Địa lý",
+        "subject": "Địa Lý",
         "number": 40,
         "time": 50,
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"

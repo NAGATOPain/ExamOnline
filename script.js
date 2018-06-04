@@ -5,8 +5,8 @@ xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         list.push(myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng);
-        for (var i = 0; i < list.length; i++){
-            document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
+        for (var i = 0; i < list.length; i++) {
+            document.getElementById(list[i].id).innerHTML = "<a>" + list[i].subject + " - " + list[i].name + "</a>";
         }
     }
 };
@@ -19,7 +19,34 @@ function indexButton() {
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
     document.getElementById("panel").innerHTML = '';
-    window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/test.pdf", '_blank');
+    switch (Subject) {
+        case "Toán":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/math.pdf", '_blank');
+            break;
+        case "Vật Lý":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/phys.pdf", '_blank');
+            break;
+        case "Hóa Học":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/chem.pdf", '_blank');
+            break;
+        case "Sinh Học":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/bio.pdf", '_blank');
+            break;
+        case "Lịch Sử":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/his.pdf", '_blank');
+            break;
+        case "Địa Lý":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/geo.pdf", '_blank');
+            break;
+        case "GDCD":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/gdcd.pdf", '_blank');
+            break;
+        case "Tiếng Anh":
+            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/eng.pdf", '_blank');
+            break;
+        default:
+            break;
+    }
     generateQuiz();
 }
 
@@ -178,7 +205,7 @@ function switchToResultPage(score, str) {
 }
 
 function timer() {
-    var countDownDate = new Date().getTime() + Time*60*1000;
+    var countDownDate = new Date().getTime() + Time * 60 * 1000;
 
     // Update the count down every 1 second
     var x = setInterval(function () {
@@ -195,7 +222,7 @@ function timer() {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementById("time").innerHTML = "Còn lại: " +hours+" giờ, "+ minutes + " phút, " + seconds + " giây.";
+        document.getElementById("time").innerHTML = "Còn lại: " + hours + " giờ, " + minutes + " phút, " + seconds + " giây.";
 
         // If the count down is over, write some text 
         if (distance < 0) {
@@ -205,11 +232,11 @@ function timer() {
     }, 1000);
 }
 
-function clickSelectSubject(i){
+function clickSelectSubject(i) {
     Subject = list[i].subject;
     Num = list[i].number;
     Answer = list[i].answer;
     Nameoftest = list[i].name;
     Time = list[i].time;
-    document.getElementsByClassName("dropbtn")[0].innerHTML = list[i].subject+" - " +list[i].name;
+    document.getElementsByClassName("dropbtn")[0].innerHTML = list[i].subject + " - " + list[i].name;
 }
