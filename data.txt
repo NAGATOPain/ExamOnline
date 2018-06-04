@@ -9,58 +9,58 @@
     },
     "phys": {
         "id": "phys",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "Đề thi thử Sở GD&ĐT Bình Thuận",
         "subject": "Vật Lý",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": "CAABDBACDDBADBBDCDDCBBCCAADDBBAACDBCCAAC"
     },
     "chem": {
         "id": "chem",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "Hóa Học",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     },
     "bio": {
         "id": "bio",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "Sinh Học",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     },
     "his": {
         "id": "his",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "Lịch Sử",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     },
     "geo": {
         "id": "geo",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "Địa Lý",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     },
     "gdcd": {
         "id": "gdcd",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "GDCD",
         "number": 40,
         "time": 50,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     },
     "eng": {
         "id": "eng",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "chưa có",
         "subject": "Tiếng Anh",
         "number": 50,
         "time": 60,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": ""
     }
 }
