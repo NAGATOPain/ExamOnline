@@ -6,6 +6,14 @@ xmlhttp.onreadystatechange = function () {
         var list = [myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng];
         for (var i = 0; i < list.length; i++){
             document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
+            document.getElementById(list[i].id).addEventListener('click', function (event) {
+                Subject = list[i].subject;
+                Num = list[i].number;
+                Answer = list[i].answer;
+                Nameoftest = list[i].name;
+                Time = list[i].time;
+                document.getElementsByClassName("dropbtn")[0].innerHTML = list[i].subject+" - " +list[i].name;
+            });
         }
     }
 };
