@@ -198,12 +198,12 @@ function timer() {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementByName("time").innerHTML = "Còn lại: " + minutes + " phút," + seconds + " giây.";
+        document.getElementByName("time")[0].innerHTML = "Còn lại: " + minutes + " phút," + seconds + " giây.";
 
         // If the count down is over, write some text 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementByName("time").innerHTML = "HẾT GIỜ !";
+            document.getElementByName("time")[0].innerHTML = "HẾT GIỜ !";
         }
     }, 1000);
 }
