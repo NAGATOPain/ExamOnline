@@ -1,20 +1,13 @@
 var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "", Time = 0;
-var list;
+var list = [];
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        list = [myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng];
+        list.push(myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng);
         for (var i = 0; i < list.length; i++){
             document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
-            document.getElementById(list[i].id).addEventListener('click', function (event) {
-                Subject = list[i].subject;
-                Num = list[i].number;
-                Answer = list[i].answer;
-                Nameoftest = list[i].name;
-                Time = list[i].time;
-                document.getElementsByClassName("dropbtn")[0].innerHTML = list[i].subject+" - " +list[i].name;
-            });
+            document.getElementById(list[i].id).addEventListener('click', clickSelectSubject(i));
         }
     }
 };
@@ -211,4 +204,13 @@ function timer() {
             document.getElementById("time").innerHTML = "HẾT GIỜ !";
         }
     }, 1000);
+}
+
+function clickSelectSubject(i){
+    Subject = list[i].subject;
+    Num = list[i].number;
+    Answer = list[i].answer;
+    Nameoftest = list[i].name;
+    Time = list[i].time;
+    document.getElementsByClassName("dropbtn")[0].innerHTML = list[i].subject+" - " +list[i].name;
 }
