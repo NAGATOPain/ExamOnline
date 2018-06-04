@@ -181,7 +181,7 @@ function switchToResultPage(score, str) {
 }
 
 function timer() {
-    var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+    var countDownDate = new Date().getTime() + Time*60*1000;
 
     // Update the count down every 1 second
     var x = setInterval(function () {
