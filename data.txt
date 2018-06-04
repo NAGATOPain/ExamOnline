@@ -1,6 +1,6 @@
 {
     "math": {
-        "id" = "math"
+        "id" = "math",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Toán",
         "number": 50,
@@ -8,7 +8,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "phys": {
-        "id" = "phys"
+        "id" = "phys",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Vật Lý",
         "number": 40,
@@ -16,7 +16,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "chem": {
-        "id" = "chem"
+        "id" = "chem",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Hóa học",
         "number": 40,
@@ -24,7 +24,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "bio": {
-        "id" = "bio"
+        "id" = "bio",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Sinh học",
         "number": 40,
@@ -32,7 +32,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "his": {
-        "id" = "his"
+        "id" = "his",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Lịch sử",
         "number": 40,
@@ -40,7 +40,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "geo": {
-        "id" = "geo"
+        "id" = "geo",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Địa lý",
         "number": 40,
@@ -48,7 +48,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "gdcd": {
-        "id" = "gdcd"
+        "id" = "gdcd",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "GDCD",
         "number": 40,
@@ -56,7 +56,7 @@
         "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
     },
     "eng": {
-        "id" = "eng"
+        "id" = "eng",
         "name": "Đề thi thử Sở GD&ĐT Nam Định",
         "subject": "Tiếng Anh",
         "number": 50,
