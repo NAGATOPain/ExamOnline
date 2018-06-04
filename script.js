@@ -22,6 +22,7 @@ function indexButton(){
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
     document.getElementById("panel").innerHTML = '';
+    window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/test.pdf", '_blank');
     generateQuiz();
 }
 
