@@ -6,17 +6,19 @@ function indexButton(){
     //Set value
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         Subject = myObj.subject;
         Num = myObj.number;
         Answer = myObj.answer;
-    }
     };
     xmlhttp.open("GET", "data.txt", true);
     xmlhttp.send();
 
     Name = name;
+    console.log(Name);
+    console.log(Subject);
+    console.log(Num);
+    console.log(Answer);
 
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
