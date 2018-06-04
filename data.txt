@@ -57,10 +57,10 @@
     },
     "eng": {
         "id": "eng",
-        "name": "chưa có",
+        "name": "Đề số 29",
         "subject": "Tiếng Anh",
         "number": 50,
         "time": 60,
-        "answer": ""
+        "answer": "BAADCCDBDADDCDCABCADDCAADBADABBCBAACBCDDABCCBDDAAC"
     }
 }
