@@ -1,29 +1,28 @@
-var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "";
+var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "", Time = 0;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        Subject = myObj.subject;
+        Num = myObj.number;
+        Answer = myObj.answer;
+        Nameoftest = myObj.name;
+        Time = myObj.time;
+        document.getElementById("labelServer").createTextNode("Đề thi hiện tại có trên server: " + Nameoftest);
+        document.getElementById("labelSubject").createTextNode("Môn: " + Subject);
+        document.getElementById("labelTime").createTextNode("Thời gian: " + Time.toString()+" phút");
+    }
+};
+xmlhttp.open("GET", "data.txt", true);
+xmlhttp.send();
 
 function indexButton(){
     var name = document.getElementById("input-name").value.trim();
-    //Legal, change pages:
-    //Set value
-    var myObj;
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myObj = JSON.parse(this.responseText);
-            Subject = myObj.subject;
-            Num = myObj.number;
-            Answer = myObj.answer;
-            Nameoftest = myObj.name;
-            generateQuiz();
-        }
-    };
-    xmlhttp.open("GET", "data.txt", true);
-    xmlhttp.send();
-
     Name = name;
-
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
     document.getElementById("panel").innerHTML = '';
+    generateQuiz();
 }
 
 function generateQuiz(){

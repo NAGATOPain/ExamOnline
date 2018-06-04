@@ -79,6 +79,24 @@ h1{
     margin: 8px 2px;
 }
 
+#labelServer{
+    font-size: 18px;
+    text-align: left;
+    margin: 8px 2px;
+}
+
+#labelSubject{
+    font-size: 18px;
+    text-align: left;
+    margin: 8px 2px;
+}
+
+#labelTime{
+    font-size: 18px;
+    text-align: left;
+    margin: 8px 2px;
+}
+
 #quiz{
     margin: 5% 5%;
 }
