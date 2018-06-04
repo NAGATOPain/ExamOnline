@@ -198,7 +198,7 @@ function timer() {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementById("time").innerHTML = "Còn lại: " +hour+" giờ, +"+ minutes + " phút," + seconds + " giây.";
+        document.getElementById("time").innerHTML = "Còn lại: " +hours+" giờ, +"+ minutes + " phút," + seconds + " giây.";
 
         // If the count down is over, write some text 
         if (distance < 0) {
