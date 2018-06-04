@@ -1,7 +1,58 @@
 {
-    "name": "Đề thi thử Sở GD&ĐT Nam Định",
-    "subject": "Toán",
-    "number": 50,
-    "time": 90,
-    "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    "math": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Toán",
+        "number": 50,
+        "time": 90,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "phys": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Vật Lý",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "chem": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Hóa học",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "bio": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Sinh học",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "his": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Lịch sử",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "geo": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Địa lý",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "gdcd": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "GDCD",
+        "number": 40,
+        "time": 50,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    },
+    "eng": {
+        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "subject": "Tiếng Anh",
+        "number": 50,
+        "time": 60,
+        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+    }
 }
