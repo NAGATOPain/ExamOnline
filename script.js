@@ -8,9 +8,9 @@ xmlhttp.onreadystatechange = function() {
         Answer = myObj.answer;
         Nameoftest = myObj.name;
         Time = myObj.time;
-        document.getElementById("labelServer").createTextNode("Đề thi hiện tại có trên server: " + Nameoftest);
-        document.getElementById("labelSubject").createTextNode("Môn: " + Subject);
-        document.getElementById("labelTime").createTextNode("Thời gian: " + Time.toString()+" phút");
+        document.getElementById("labelServer").innerHTML = "Đề thi: " + Nameoftest;
+        document.getElementById("labelSubject").innerHTML = "Môn: " + Subject;
+        document.getElementById("labelTime").innerHTML = "Thời gian: " + Time.toString()+" phút";
     }
 };
 xmlhttp.open("GET", "data.txt", true);
