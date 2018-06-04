@@ -4,13 +4,15 @@ function indexButton(){
     var name = document.getElementById("input-name").value.trim();
     //Legal, change pages:
     //Set value
+    var myObj;
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var myObj = JSON.parse(this.responseText);
+            myObj = JSON.parse(this.responseText);
             Subject = myObj.subject;
             Num = myObj.number;
             Answer = myObj.answer;
+            generateQuiz();
         }
     };
     xmlhttp.open("GET", "data.txt", true);
@@ -21,8 +23,6 @@ function indexButton(){
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
     document.getElementById("panel").innerHTML = '';
-    console.log(Num);
-    generateQuiz();
 }
 
 function generateQuiz(){
