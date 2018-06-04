@@ -1,0 +1,90 @@
+h1{
+    font-size: 40px;
+}
+
+#title {
+    text-align: center;
+    color: #1a8cff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#panel{
+    margin: auto;
+    width: 33.3%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 8px;
+    text-align: center;
+}
+
+#input-name{
+    width: 100%;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+#input-subject{
+    width: 100%;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+#input-numofquiz{
+    width: 100%;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+#input-answer{
+    width: 100%;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    text-transform: uppercase;
+}
+
+#button{
+    background-color: #1a8cff;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+
+}
+
+#label{
+    font-size: 18px;
+    text-align: left;
+    margin: 8px 2px;
+}
+
+#quiz{
+    margin: 5% 5%;
+}
+
+#radio{
+    width: 18px;
+    height: 18px;
+    margin: 5% 5%;
+}

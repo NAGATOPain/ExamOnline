@@ -1,0 +1,159 @@
+var Name = "", Subject = "", Num = 0, Answer = "";
+
+function indexButton(){
+    var name = document.getElementById("input-name").value.trim();
+    var subject = document.getElementById("input-subject").value.trim();
+    var num = parseInt(document.getElementById("input-numofquiz").value.trim());
+    var answer = document.getElementById("input-answer").value.trim();
+    //Check if the text is legal
+    if (name === "" || subject === "" || isNaN(num) || answer === "" || answer.length != num){
+        alert("Bạn nhập không hợp lệ! Vui lòng kiểm tra lại!");
+        return;
+    }
+    var i;
+    for (i = 0; i < num; i++){
+        var char = answer.charAt(i);
+        if (char != 'a' && char != 'b' && char != 'c' && char != 'd'
+            && char != 'A' && char != 'B' && char != 'C' && char != 'D'){
+            alert("Bạn nhập không hợp lệ! Vui lòng kiểm tra lại!");
+            return;
+        }
+    }
+    //Legal, change pages:
+    //Set value
+    Subject = subject;
+    Num = num;
+    Answer = answer;
+    Name = name;
+
+    document.title = "Phiếu đáp án";
+    document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
+    document.getElementById("panel").innerHTML = '';
+    generateQuiz();
+    
+}
+
+function generateQuiz(){
+    var panel = document.getElementById("panel");
+    var i;
+    for (i = 0; i < Num; i++){
+        var quizAtI = document.createElement("div");
+        quizAtI.name = "as" + (i+1).toString();
+        var lblNum = document.createElement("b");
+        lblNum.id = "label";
+        var str;
+        if (i < 9) str = "Câu 0"+(i+1).toString()+": ";
+        else str = "Câu "+(i+1).toString()+": ";
+
+        var s = document.createTextNode(str);
+        lblNum.appendChild(s);
+        quizAtI.appendChild(lblNum);
+
+        var quiz = document.createElement("span");
+        quiz.id = "quiz";
+        //Quiz setup:
+        var j;
+        var buffer = "ABCD";
+        for (j = 0; j < 4; j++){
+            quiz.appendChild(document.createTextNode(buffer.charAt(j)+"."));
+            var radio = document.createElement("input");
+            radio.type = "radio"; radio.name = "as" + (i+1).toString();
+            radio.id = "radio";
+            quiz.appendChild(radio);
+        }
+        quizAtI.appendChild(quiz);
+        panel.appendChild(quizAtI);
+    }
+    //Add button
+    var button = document.createElement("button");
+    button.id = "button"; 
+    button.type = "button"; 
+    button.appendChild(document.createTextNode("Chấm điểm >>"));
+    button.onclick = scoring;
+    panel.appendChild(button);
+}
+
+function scoring(){
+    var result = [];
+    var answer = [];
+    var i;
+    for (i = 0; i < Num; i++){
+        result.push(Answer.charAt(i));
+        result[i] += "";
+        result[i] = result[i].toLowerCase();
+        //result[i] += "";
+        var checkbox = document.getElementsByName("as"+(i+1).toString());
+        var checkone,j;
+        for (j = 0; j < checkbox.length; j++){
+            if (checkbox[j].checked){
+                checkone = j+1; break;
+            }
+        }
+        switch (checkone){
+            case 1:
+                answer.push("a");
+                break;
+            case 2:
+                answer.push("b");
+                break;
+            case 3:
+                answer.push("c");
+                break;
+            case 4:
+                answer.push("d");
+                break;
+            default:
+                break;
+        }
+    } 
+    var score = 0.0;
+    var wrong_ans = [];
+
+    for (i = 0; i < Num; i++){
+        if (answer[i] == result[i]) score += (10.0/Num);
+        else wrong_ans.push(i+1);
+    }
+    var score_str = score.toFixed(2).toString();
+    str = "";
+    if (wrong_ans.length == 0){
+        str = "Bạn không sai câu nào !"
+    }
+    else{
+        for (i = 0; i < wrong_ans.length - 1; i++)
+        str += wrong_ans[i].toString() + " - "+result[wrong_ans[i]-1].toUpperCase()+", ";
+        str += wrong_ans[wrong_ans.length - 1].toString() + " - "+result[wrong_ans[wrong_ans.length - 1]-1].toUpperCase()+".";
+    }
+    switchToResultPage(score_str, str);
+}
+
+function switchToResultPage(score, str){
+    document.title = "Kết quả";
+    document.getElementById("title").innerHTML = "<h1><b>KẾT QUẢ</b></h1>";
+    document.getElementById("panel").innerHTML = '';
+    var panel = document.getElementById("panel");
+
+    var lbl_panel = document.createElement("b");
+    lbl_panel.appendChild(document.createTextNode("Điểm của bạn: "));
+    var score_panel = document.createElement("div");
+    score_panel.appendChild(lbl_panel);
+    score_panel.appendChild(document.createTextNode(score));
+
+    var lbl_panel1 = document.createElement("b");
+    lbl_panel1.appendChild(document.createTextNode("Những câu sai (và đáp án bên cạnh): "));
+    var wrong_panel = document.createElement("div");
+    wrong_panel.appendChild(lbl_panel1);
+    wrong_panel.appendChild(document.createTextNode(str));
+
+    panel.appendChild(score_panel);
+    panel.appendChild(wrong_panel);
+
+    panel.appendChild(document.createElement("br"));
+    
+    //Add button
+    var button = document.createElement("button");
+    button.id = "button";
+    button.type = "button"; 
+    button.appendChild(document.createTextNode("Trở lại trang chủ >>"));
+    button.onclick = () => {location.reload();};
+    panel.appendChild(button);
+}
