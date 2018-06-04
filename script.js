@@ -29,8 +29,7 @@ function indexButton() {
 function generateQuiz() {
     var panel = document.getElementById("panel");
     var time = document.createElement("div");
-    time.name = "time";
-    time.id = "label";
+    time.id = "time";
     panel.appendChild(time);
     timer();
     for (var i = 0; i < Num; i++) {
@@ -198,12 +197,12 @@ function timer() {
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="demo"
-        document.getElementByName("time")[0].innerHTML = "Còn lại: " + minutes + " phút," + seconds + " giây.";
+        document.getElementById("time").innerHTML = "Còn lại: " + minutes + " phút," + seconds + " giây.";
 
         // If the count down is over, write some text 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementByName("time")[0].innerHTML = "HẾT GIỜ !";
+            document.getElementById("time").innerHTML = "HẾT GIỜ !";
         }
     }, 1000);
 }
