@@ -3,14 +3,14 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        Subject = myObj.subject;
+        Subject = myObj.subject.toUpperCase();
         Num = myObj.number;
         Answer = myObj.answer;
-        Nameoftest = myObj.name;
+        Nameoftest = myObj.name.toUpperCase();
         Time = myObj.time;
-        document.getElementById("labelServer").innerHTML = "Đề thi: " + Nameoftest;
-        document.getElementById("labelSubject").innerHTML = "Môn: " + Subject;
-        document.getElementById("labelTime").innerHTML = "Thời gian: " + Time.toString() + " phút";
+        document.getElementById("labelServer").textContent += Nameoftest;
+        document.getElementById("labelSubject").textContent += Subject;
+        document.getElementById("labelTime").textContent += Time.toString() + " phút";
     }
 };
 xmlhttp.open("GET", "data.txt", true);
