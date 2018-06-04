@@ -1,4 +1,4 @@
-var Name = "", Subject = "", Num = 0, Answer = "";
+var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "";
 
 function indexButton(){
     var name = document.getElementById("input-name").value.trim();
@@ -12,6 +12,7 @@ function indexButton(){
             Subject = myObj.subject;
             Num = myObj.number;
             Answer = myObj.answer;
+            Nameoftest = myObj.name;
             generateQuiz();
         }
     };
@@ -134,6 +135,12 @@ function switchToResultPage(score, str){
     name_panel.appendChild(name_lbl);
     name_panel.appendChild(document.createTextNode(Name));
 
+    var test_lbl = document.createElement("b");
+    test_lbl.appendChild(document.createTextNode("Đề thi: "));
+    var test_panel = document.createElement("div");
+    test_panel.appendChild(test_lbl);
+    test_panel.appendChild(document.createTextNode(Nameoftest));
+
     var sub_lbl = document.createElement("b");
     sub_lbl.appendChild(document.createTextNode("Môn thi: "));
     var sub_panel = document.createElement("div");
@@ -153,6 +160,8 @@ function switchToResultPage(score, str){
     wrong_panel.appendChild(document.createTextNode(str));
 
     panel.appendChild(name_panel);
+    panel.appendChild(document.createElement("br"));
+    panel.appendChild(test_panel);
     panel.appendChild(document.createElement("br"));
     panel.appendChild(sub_panel);
     panel.appendChild(document.createElement("br"));
