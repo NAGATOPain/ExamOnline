@@ -1,9 +1,10 @@
 var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "", Time = 0;
+var list;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        var list = [myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng];
+        list = [myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng];
         for (var i = 0; i < list.length; i++){
             document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
             document.getElementById(list[i].id).addEventListener('click', function (event) {
