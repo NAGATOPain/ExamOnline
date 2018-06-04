@@ -1,0 +1,9 @@
+{
+    "name": "Đề thi thử THPT Chuyên Đại học Vinh lần 3",
+    "subject": "Toán",
+    "number": 50,
+    "time": 90,
+    "start-hour": 21,
+    "start-minute": 30,
+    "answer": "BDBABDBACBDBCDCCDCDABBCAAAADACBBDCDCCCBCDAACDBDCCA"
+}

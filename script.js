@@ -2,35 +2,26 @@ var Name = "", Subject = "", Num = 0, Answer = "";
 
 function indexButton(){
     var name = document.getElementById("input-name").value.trim();
-    var subject = document.getElementById("input-subject").value.trim();
-    var num = parseInt(document.getElementById("input-numofquiz").value.trim());
-    var answer = document.getElementById("input-answer").value.trim();
-    //Check if the text is legal
-    if (name === "" || subject === "" || isNaN(num) || answer === "" || answer.length != num){
-        alert("Bạn nhập không hợp lệ! Vui lòng kiểm tra lại!");
-        return;
-    }
-    var i;
-    for (i = 0; i < num; i++){
-        var char = answer.charAt(i);
-        if (char != 'a' && char != 'b' && char != 'c' && char != 'd'
-            && char != 'A' && char != 'B' && char != 'C' && char != 'D'){
-            alert("Bạn nhập không hợp lệ! Vui lòng kiểm tra lại!");
-            return;
-        }
-    }
     //Legal, change pages:
     //Set value
-    Subject = subject;
-    Num = num;
-    Answer = answer;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        Subject = myObj.subject;
+        Num = myObj.number;
+        Answer = myObj.answer;
+    }
+    };
+    xmlhttp.open("GET", "data.txt", true);
+    xmlhttp.send();
+
     Name = name;
 
     document.title = "Phiếu đáp án";
     document.getElementById("title").innerHTML = "<h1><b>PHIẾU ĐÁP ÁN</b></h1>";
     document.getElementById("panel").innerHTML = '';
     generateQuiz();
-    
 }
 
 function generateQuiz(){
