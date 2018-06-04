@@ -10,7 +10,7 @@ xmlhttp.onreadystatechange = function() {
         Time = myObj.time;
         document.getElementById("labelServer").innerHTML = "Đề thi: " + Nameoftest;
         document.getElementById("labelSubject").innerHTML = "Môn: " + Subject;
-        document.getElementById("labelTime").innerHTML = "Thời gian: " + Time+" phút";
+        document.getElementById("labelTime").innerHTML = "Thời gian: " + Time;
     }
 };
 xmlhttp.open("GET", "data.txt", true);
