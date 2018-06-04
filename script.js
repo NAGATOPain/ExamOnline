@@ -7,7 +7,6 @@ xmlhttp.onreadystatechange = function () {
         list.push(myObj.math, myObj.phys, myObj.chem, myObj.bio, myObj.his, myObj.geo, myObj.gdcd, myObj.eng);
         for (var i = 0; i < list.length; i++){
             document.getElementById(list[i].id).innerHTML = "<a>"+list[i].subject+" - " +list[i].name+"</a>";
-            document.getElementById(list[i].id).addEventListener('click', clickSelectSubject(i));
         }
     }
 };
