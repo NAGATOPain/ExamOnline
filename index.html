@@ -18,17 +18,8 @@
                 <div id = "label"><b>Môn: </b><span id = "labelSubject"></span></div>
                 <div id = "label"><b>Thời gian: </b><span id = "labelTime"></span></div>
                 <div id = "label">Họ và tên:</div>
-                <input id = "input-name" type="text" name="name" placeholder="Nguyễn Văn A..."><br>
+                <input id = "input-name" type="text" name="name" placeholder="Không gõ Enter, hãy click..."><br>
                 <button id = "button" type = "button" onclick="indexButton()">Làm ngay >></button>
-                <script>
-                document.getElementById("input-name").addEventListener("keyup", function(event) {
-                    event.preventDefault();
-                    if (event.keyCode === 13) {
-                    // Trigger the button element with a click
-                    document.getElementById("button").click();
-                    }
-                });
-                </script>
             </form>
         </div>
     </body>
