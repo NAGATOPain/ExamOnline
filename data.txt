@@ -1,11 +1,11 @@
 {
     "math": {
         "id": "math",
-        "name": "Đề thi thử Sở GD&ĐT Nam Định",
+        "name": "Đề thi thử THPT Chuyên Long An - lần 2",
         "subject": "Toán",
         "number": 50,
         "time": 90,
-        "answer": "BDCAAABACABBDABCCBDCCBBAACABAABACABBABDDBADAAADADA"
+        "answer": "DCABCACAABACBCBADCDADBCAABBBBCADCBDACCDCBBDDADDDDA"
     },
     "phys": {
         "id": "phys",
