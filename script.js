@@ -51,7 +51,10 @@ function indexButton() {
 }
 
 function generateQuiz() {
+    //Clear footer:
+    document.getElementById("footer").style.display = "none";
     var panel = document.getElementById("panel");
+    
     var time = document.createElement("div");
     time.id = "time";
     panel.appendChild(time);
@@ -155,6 +158,7 @@ function scoring(timeout = false) {
 }
 
 function switchToResultPage(score, str) {
+    document.getElementById("footer").style.display = "inline";
     document.title = "Kết quả";
     document.getElementById("title").innerHTML = "<h1><b>KẾT QUẢ</b></h1>";
     document.getElementById("panel").innerHTML = '';
