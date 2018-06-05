@@ -1,5 +1,6 @@
 var Name = "", Subject = "", Num = 0, Answer = "", Nameoftest = "", Time = 0;
 var list = [];
+var timeout = false;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -21,28 +22,28 @@ function indexButton() {
     document.getElementById("panel").innerHTML = '';
     switch (Subject) {
         case "Toán":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/math.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/math.pdf", '_blank');
             break;
         case "Vật Lý":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/phys.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/phys.pdf", '_blank');
             break;
         case "Hóa Học":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/chem.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/chem.pdf", '_blank');
             break;
         case "Sinh Học":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/bio.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/bio.pdf", '_blank');
             break;
         case "Lịch Sử":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/his.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/his.pdf", '_blank');
             break;
         case "Địa Lý":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/geo.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/geo.pdf", '_blank');
             break;
         case "GDCD":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/gdcd.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/gdcd.pdf", '_blank');
             break;
         case "Tiếng Anh":
-            window.open("https://github.com/NAGATOPain/NAGATOPain.github.io/raw/master/eng.pdf", '_blank');
+            window.open("https://github.com/thithuthptquocgia/thithuthptquocgia.github.io/raw/master/eng.pdf", '_blank');
             break;
         default:
             break;
@@ -95,7 +96,7 @@ function generateQuiz() {
     panel.appendChild(button);
 }
 
-function scoring(timeout = false) {
+function scoring() {
     var result = [];
     var answer = [];
     for (var i = 0; i < Num; i++) {
@@ -115,7 +116,7 @@ function scoring(timeout = false) {
                     return;
                 }
                 else {
-                    checkone = 1;
+                    checkone = -1;
                     break;
                 }
             }
@@ -134,6 +135,7 @@ function scoring(timeout = false) {
                 answer.push("d");
                 break;
             default:
+                answer.push("0");
                 break;
         }
     }
@@ -226,6 +228,11 @@ function timer() {
         // Find the distance between now an the count down date
         var distance = countDownDate - now;
 
+        if (distance <= 5*60*1000 && distance >= 298 * 1000){
+            // 5 minutes next:
+            alert("Còn 5 phút ! Hãy hoàn thành phiếu !");
+        }
+
         // Time calculations for days, hours, minutes and seconds
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -238,7 +245,8 @@ function timer() {
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("time").innerHTML = "HẾT GIỜ !";
-            scoring(true);
+            timeout = true;
+            scoring();
         }
     }, 1000);
 }

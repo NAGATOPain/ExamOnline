@@ -17,35 +17,35 @@
     },
     "chem": {
         "id": "chem",
-        "name": "chưa có",
+        "name": "Đề thi thử THPT Chuyên Thái Nguyên - lần 2",
         "subject": "Hóa Học",
         "number": 40,
         "time": 50,
-        "answer": ""
+        "answer": "ABABBBCBDCCDADDBCCBACADDCDDBDCCBDDCBDDCD"
     },
     "bio": {
         "id": "bio",
-        "name": "chưa có",
+        "name": "Đề thi thử THPT Chuyên Hùng Vương - Gia Lai (lần 1)",
         "subject": "Sinh Học",
         "number": 40,
         "time": 50,
-        "answer": ""
+        "answer": "DDBAABACCCDBBCBCBABADCABACACDACBBCAAABDB"
     },
     "his": {
         "id": "his",
-        "name": "chưa có",
+        "name": "Đề thi thử THPT Chuyên Bắc Giang",
         "subject": "Lịch Sử",
         "number": 40,
         "time": 50,
-        "answer": ""
+        "answer": "BDCDBCBCABBDCDAAAADDCABBBCBBDCAABCBBBDAA"
     },
     "geo": {
         "id": "geo",
-        "name": "chưa có",
+        "name": "Đề thi thử THPT Chuyên Quốc học Huế - lần 1",
         "subject": "Địa Lý",
         "number": 40,
         "time": 50,
-        "answer": ""
+        "answer": "BABCBABACBCDABDCAABDACDAAADCBAABCCDDCDDA"
     },
     "gdcd": {
         "id": "gdcd",
