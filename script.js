@@ -92,7 +92,7 @@ function generateQuiz() {
     panel.appendChild(button);
 }
 
-function scoring() {
+function scoring(timeout = false) {
     var result = [];
     var answer = [];
     for (var i = 0; i < Num; i++) {
@@ -107,8 +107,14 @@ function scoring() {
                 checkone = j + 1; break;
             }
             if (j == checkbox.length - 1 && !checkbox[checkbox.length - 1].checked) {
-                alert("Bạn bỏ sót đáp án. Hãy chọn cho đủ !");
-                return;
+                if (!timeout){
+                    alert("Bạn bỏ sót đáp án. Hãy chọn cho đủ !");
+                    return;
+                }
+                else {
+                    checkone = 1;
+                    break;
+                }
             }
         }
         switch (checkone) {
@@ -205,7 +211,7 @@ function switchToResultPage(score, str) {
 }
 
 function timer() {
-    var countDownDate = new Date().getTime() + Time * 60 * 1000;
+    var countDownDate = new Date().getTime() + (Time+1) * 60 * 1000;
 
     // Update the count down every 1 second
     var x = setInterval(function () {
@@ -228,6 +234,7 @@ function timer() {
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("time").innerHTML = "HẾT GIỜ !";
+            scoring(true);
         }
     }, 1000);
 }
